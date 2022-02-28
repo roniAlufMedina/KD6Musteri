@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Customer
+
+<th>
+    <label asp-for="ID"></label>
+    <br />
+</th>
+<th>
+    <label asp-for="Name"></label>
+    <br />
+</th>
+<th>
+    <label asp-for="EMail"></label>
+</th>
+@await Html.PartialAsync("_ListPhoneHeaders",Model.Phone) 
+<th>
+    <label asp-for="CreatedDate"></label>
+</th>
+<th>
+    <label asp-for="Notes"></label>
+</th>
+<th></th>

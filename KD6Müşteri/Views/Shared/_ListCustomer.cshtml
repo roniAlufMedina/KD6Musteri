@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Customer
+
+<td>
+    <input asp-for="ID" disabled />
+</td>
+<td>
+    <input asp-for="Name" disabled />
+</td>
+<td>
+    <input asp-for="EMail" disabled />
+</td>
+ @await Html.PartialAsync("_ListPhone",Model.Phone) 
+<td>
+    <input asp-for="CreatedDate" disabled />
+</td>
+<td>
+    <textarea asp-for="Notes" disabled></textarea>
+</td>
+<td>    
+    <a asp-controller="Customer" asp-route-id=@Model.ID asp-action="Edit"> Kayıt Değiştir </a> |
+    <a asp-controller="Customer" asp-route-MüşteriKodu=@Model.ID 
+       asp-route-slug=@(Model.Name)
+       asp-action="Details"> Kayıt Görüntüle</a>|
+    <a asp-controller="Customer" asp-route-id=@Model.ID asp-action="Delete"> Kayıt Sil</a>
+</td>

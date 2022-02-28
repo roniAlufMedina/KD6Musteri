@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Customer>
+
+@{
+    //ViewData["Title"] = "Index";
+    ViewBag.Title = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Yeni Müşteri Aç</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            @await Html.PartialAsync("_ListCustomerHeaders",Model.FirstOrDefault<Customer>())
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>            
+            @await Html.PartialAsync("_ListCustomer", item)           
+        </tr>
+}
+    </tbody>
+</table>

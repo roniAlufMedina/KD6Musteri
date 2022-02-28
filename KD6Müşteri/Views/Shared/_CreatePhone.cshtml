@@ -1,0 +1,33 @@
+﻿@model Customer
+
+@*<div class="form-group">
+    <label asp-for="PhoneID" class="control-label"></label>
+    <input asp-for="PhoneID" class="form-control" />
+    <span asp-validation-for="PhoneID" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="PhoneType" class="control-label"></label>
+    <select asp-for="PhoneType" asp-items="Html.GetEnumSelectList<PhoneTypes>()" class="form-control"></select>
+    <span asp-validation-for="PhoneType" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="PhoneNumber" class="control-label"></label>
+    <input asp-for="PhoneNumber" class="form-control" />
+    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+</div>*@
+
+<div class="form-group">
+    <label asp-for="Phone.PhoneID" class="control-label"></label>
+    <input asp-for="Phone.PhoneID" class="form-control" />
+    <span asp-validation-for="Phone.PhoneID" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Phone.PhoneType" class="control-label"></label>
+    <select asp-for="Phone.PhoneType" asp-items="Html.GetEnumSelectList<PhoneTypes>()" class="form-control"></select>
+    <span asp-validation-for="Phone.PhoneType" class="text-danger"></span>
+</div>
+<div class="form-group">
+    <label asp-for="Phone.PhoneNumber" class="control-label"></label>
+    <input asp-for="Phone.PhoneNumber" class="form-control" />
+    <span asp-validation-for="Phone.PhoneNumber" class="text-danger"></span>
+</div>
